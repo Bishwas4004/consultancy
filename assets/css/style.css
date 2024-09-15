@@ -479,6 +479,7 @@ body {
 .about {
   padding-block-start: 0;
   overflow: hidden;
+  margin-bottom: 0%;
 }
 
 .about .container {
@@ -533,6 +534,138 @@ body {
   color: var(--eerie-black-1);
   font-family: var(--ff-league_spartan);
 }
+
+
+/* Testimonials */
+/* -------------------- */
+.tst_slider_section {
+  padding: 2%;
+  margin-top: 0%;
+  display: flex;
+  justify-content: center;
+}
+
+.tst_slider_container_82956 {
+  width: 60%;
+  background: linear-gradient(135deg, #f6f9fc, #e0efff);
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.tst_slider_82956 {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.tst_slide_82956 {
+  flex: 0 0 100%;
+  display: flex;
+  padding: 50px;
+  background: linear-gradient(135deg, #9de3f8, #489bee);
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 15px;
+}
+
+.tst_student_info_82956 {
+  flex: 0 0 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.tst_student_image_82956 {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.tst_student_name_82956 {
+  font-weight: 600;
+  text-align: center;
+  color: #333;
+  font-size: 1.4em;
+  margin-bottom: 8px;
+}
+
+.tst_student_details_82956 {
+  font-size: 1em;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.tst_testimonial_82956 {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  font-style: italic;
+  color: #555;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  font-size: 1.2em;
+  line-height: 1.8;
+}
+
+.tst_nav_button_82956 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #666;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  z-index: 15;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tst_nav_button_82956:hover {
+  background-color: #ffffff;
+  color: #3498db;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.tst_prev_82956 {
+  left: 20px;
+}
+
+.tst_next_82956 {
+  right: 20px;
+}
+
+@media (max-width: 768px) {
+  .tst_slider_container_82956 {
+    width: 90%;
+  }
+  .tst_slide_82956 {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px;
+  }
+  .tst_student_info_82956 {
+    margin-right: 0;
+    margin-bottom: 25px;
+  }
+  .tst_testimonial_82956 {
+    padding: 25px;
+  }
+}
+
 
 /*-----------------------------------*\
   #FOOTER

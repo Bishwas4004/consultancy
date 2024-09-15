@@ -1,0 +1,159 @@
+<div class="tst_slider_container_82956">
+    <div class="tst_slider_82956">
+        <div class="tst_slide_82956">
+            <div class="tst_student_info_82956">
+                <img src="https://via.placeholder.com/100" alt="Student 1" class="tst_student_image_82956">
+                <p class="tst_student_name_82956">John Doe</p>
+            </div>
+            <div class="tst_testimonial_82956">
+                <p>"This school has been an amazing experience. The teachers are supportive, and I've learned so much!"</p>
+            </div>
+        </div>
+        <div class="tst_slide_82956">
+            <div class="tst_student_info_82956">
+                <img src="https://via.placeholder.com/100" alt="Student 2" class="tst_student_image_82956">
+                <p class="tst_student_name_82956">Jane Smith</p>
+            </div>
+            <div class="tst_testimonial_82956">
+                <p>"I've grown both academically and personally thanks to the wonderful community at this school."</p>
+            </div>
+        </div>
+        <div class="tst_slide_82956">
+            <div class="tst_student_info_82956">
+                <img src="https://via.placeholder.com/100" alt="Student 3" class="tst_student_image_82956">
+                <p class="tst_student_name_82956">Mike Johnson</p>
+            </div>
+            <div class="tst_testimonial_82956">
+                <p>"The small class sizes and personalized attention have really helped me excel in my studies."</p>
+            </div>
+        </div>
+    </div>
+    <button class="tst_nav_button_82956 tst_prev_82956">&#10094;</button>
+    <button class="tst_nav_button_82956 tst_next_82956">&#10095;</button>
+</div>
+
+<style>
+    .tst_slider_container_82956 {
+        width: 100%;
+        max-width: 800px;
+        background-color: #f0f8ff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        position: relative;
+    }
+
+    .tst_slider_82956 {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .tst_slide_82956 {
+        flex: 0 0 100%;
+        display: flex;
+        padding: 40px;
+        background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+    }
+
+    .tst_student_info_82956 {
+        flex: 0 0 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 20px;
+    }
+
+    .tst_student_image_82956 {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 10px;
+        border: 3px solid #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .tst_student_name_82956 {
+        font-weight: bold;
+        text-align: center;
+        color: #333;
+        font-size: 1.2em;
+    }
+
+    .tst_testimonial_82956 {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        font-style: italic;
+        color: #444;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .tst_nav_button_82956 {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(255, 255, 255, 0.7);
+        color: #333;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        font-size: 18px;
+        border-radius: 50%;
+        transition: background-color 0.3s;
+    }
+
+    .tst_nav_button_82956:hover {
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    .tst_prev_82956 {
+        left: 10px;
+    }
+
+    .tst_next_82956 {
+        right: 10px;
+    }
+
+    @media (max-width: 768px) {
+        .tst_slide_82956 {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .tst_student_info_82956 {
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+    }
+</style>
+
+<script>
+    (function() {
+        const slider = document.querySelector('.tst_slider_82956');
+        const slides = document.querySelectorAll('.tst_slide_82956');
+        const prevButton = document.querySelector('.tst_prev_82956');
+        const nextButton = document.querySelector('.tst_next_82956');
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            if (index < 0) {
+                currentIndex = slides.length - 1;
+            } else if (index >= slides.length) {
+                currentIndex = 0;
+            } else {
+                currentIndex = index;
+            }
+            slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        prevButton.addEventListener('click', () => showSlide(currentIndex - 1));
+        nextButton.addEventListener('click', () => showSlide(currentIndex + 1));
+
+        // Optional: Auto-slide functionality
+        setInterval(() => showSlide(currentIndex + 1), 5000);
+    })();
+</script>
