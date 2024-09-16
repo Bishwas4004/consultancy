@@ -262,70 +262,99 @@
   </main>
 
   <footer class="footer" style="background-image: url('./assets/images/footer-bg.png')">
-    <div class="footer-top section">
-      <div class="container grid-list">
+    <div class="footer-top section" style="padding-block: 0%">
+      <div class="container footer-grid">
+        
+        <!-- Brand and Contact Info -->
         <div class="footer-brand">
           <a href="#" class="logo">
             <img src="./assets/images/main_logo.JPG" width="140" height="50" alt="EduWeb logo">
           </a>
-          <p class="footer-brand-text">
-            Feel free to contact us. We will be very delighted to help you.
-          </p>
+          <p class="footer-brand-text">Feel free to contact us. We will be very delighted to help you.</p>
           <div class="wrapper">
-            <span class="span">Add:</span>
+            <span class="span" style="font-weight: 700;">Add:</span>
             <address class="address">Tokha-10, Samakhushi</address>
           </div>
           <div class="wrapper">
-            <span class="span">Call:</span>
+            <span class="span" style="font-weight: 700;">Call:</span>
             <a href="tel:+011234567890" class="footer-link">01-5921201</a>
           </div>
           <div class="wrapper">
-            <span class="span">Email:</span>
+            <span class="span" style="font-weight: 700;">Email:</span>
             <a href="mailto:info@eduweb.com" class="footer-link">eban.international2024@gmail.com</a>
           </div>
         </div>
-
-        <ul class="footer-list" id="list1">
-          <li>
-            <p class="footer-list-title">Links</p>
-          </li>
-          <li>
-            <a href="#" class="footer-link">Contact Us</a>
-          </li>
-          <li>
-            <a href="#" class="footer-link">About Us</a>
-          </li>
-          <li>
-            <a href="#" class="footer-link">FAQ's</a>
-          </li>
-        </ul>
-        <ul></ul>
-        <div class="footer-list">
-          <p class="footer-list-title">Socials</p>
-          <p class="footer-list-text">
-            Please contact us through following social platforms
-          </p>
-          <a target="_blank" href="https://www.facebook.com/profile.php?id=61559304430920" class="about-item">
-            <ion-icon style="color:white" name="logo-facebook" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
-            <span class="span" style="color:white">Facebook Page</span>
-          </a>
-          <a href="javascript:none()" class="about-item">
-            <ion-icon style="color:white" name="logo-instagram" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
-            <span class="span" style="color:white">Instagram</span>
-          </a>
-          <a href="javascript:none()" class="about-item">
-            <ion-icon style="color:white" name="logo-linkedin" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
-            <span class="span" style="color:white">LinkedIn</span>
-          </a>
-          <a href="mailto:eban.international2024@gmail.com" class="about-item">
-            <ion-icon style="color:white" name="mail-outline" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
-            <span class="span" style="color:white">eban.international2024@gmail.com</span>
-          </a>
+  
+        <!-- Quick Links and Socials -->
+        <div class="footer-list-container">
+          <ul class="footer-list">
+            <li>
+              <p class="footer-list-title">Links</p>
+            </li>
+            <li>
+              <a href="#" class="footer-link">Contact Us</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link">About Us</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link">FAQ's</a>
+            </li>
           </ul>
+  
+          <!-- Socials Section -->
+          <div class="social-links">
+            <a target="_blank" href="https://www.facebook.com/profile.php?id=61559304430920" class="about-item">
+              <ion-icon style="color:white" name="logo-facebook"></ion-icon>
+              <span class="span">Facebook Page</span>
+            </a>
+            <a href="#" class="about-item">
+              <ion-icon style="color:white" name="logo-instagram"></ion-icon>
+              <span class="span">Instagram</span>
+            </a>
+            <a href="#" class="about-item">
+              <ion-icon style="color:white" name="logo-linkedin"></ion-icon>
+              <span class="span">LinkedIn</span>
+            </a>
+            <a href="mailto:eban.international2024@gmail.com" class="about-item">
+              <ion-icon style="color:white" name="mail-outline"></ion-icon>
+              <span class="span">eban.international2024@gmail.com</span>
+            </a>
+          </div>
         </div>
+  
+        <!-- Contact Form with Phone and Email Horizontally Aligned -->
+        <div class="footer-form">
+          <p class="footer-list-title" style="text-align: center;">Request A Callback</p>
+          <form action="#" method="POST" class="newsletter-form">
+            <div class="input-group">
+              <input type="text" class="input-field" name="name" placeholder="Full Name" required>
+            </div>
+  
+            <!-- Phone and Email side by side -->
+            <div class="input-group">
+              <input type="tel" class="input-field" name="phone" placeholder="Phone Number" required>
+            </div>
+
+            <div  class="input-group">
+              <input type="email" class="input-field" name="email" placeholder="Email Address" required>
+            </div>
+  
+            <div class="input-group">
+              <textarea class="input-field" name="message" placeholder="Your Message" rows="4"></textarea>
+            </div>
+  
+            <center><button type="submit" class="btn">Submit</button></center>
+          </form>
+        </div>
+        
       </div>
     </div>
   </footer>
+  
+  
+  
+  
   <a href="#top" class="back-top-btn" aria-label="back top top" data-back-top-btn>
     <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
   </a>

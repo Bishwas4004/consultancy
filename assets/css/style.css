@@ -107,6 +107,7 @@ input,
 button,
 ion-icon { display: block; }
 
+
 a {
   color: inherit;
   text-decoration: none;
@@ -666,6 +667,86 @@ body {
   }
 }
 
+/* FORM */
+/* Container for the contact form */
+.footer-contact-form {
+  background-color: hsl(0, 0%, 70%);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 60%; /* Make the form width 70% */
+  margin: 0 auto; /* Center the form horizontally */
+  margin-bottom: 1%;
+}
+
+/* Row styling for Name and Email */
+.input-row {
+  display: flex;
+  gap: 20px;
+}
+
+.input-row .input-group {
+  flex: 1;
+}
+
+.footer-contact-form .input-group {
+  display: flex;
+  position: relative;
+}
+
+.footer-contact-form .input-group label {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+  font-size: 1.2em;
+}
+
+.footer-contact-form .input-group input,
+.footer-contact-form .input-group textarea {
+  width: 100%;
+  padding: 15px 15px 15px 50px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 1em;
+}
+
+.footer-contact-form .footer-submit-btn {
+  padding: 15px;
+  background-color: #ff8c00;
+  color: white;
+  font-size: 1em;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.footer-contact-form .footer-submit-btn:hover {
+  background-color: #ff6a00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .input-row {
+    flex-direction: column;
+  }
+  .footer-contact-form {
+    width: 90%; /* Expand to 90% width on smaller screens */
+    padding: 15px;
+  }
+  .footer-form-title {
+    font-size: var(--fs-4);
+  }
+  .footer-contact-form .footer-submit-btn {
+    padding: 12px;
+  }
+}
+
 
 /*-----------------------------------*\
   #FOOTER
@@ -676,27 +757,37 @@ body {
   background-color: var(--eerie-black-2);
   color: var(--gray-x-11);
   font-size: var(--fs-5);
+  padding: 40px 0;
 }
 
-.footer-top {
-  display: grid;
-  gap: 30px;
-  /* justify-content: space-between;  */
+/* Flexbox Layout */
+.footer-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
 }
-.footer-brand-text { margin-block: 20px; }
 
+.footer-brand, .footer-list-container, .footer-form {
+  flex: 1 1 30%; /* Make each section flexible */
+  min-width: 250px; /* Ensure a minimum width for each section */
+}
+
+.footer-brand-text {
+  margin-block: 20px;
+}
+
+/* Contact Information Wrappers */
 .footer-brand .wrapper {
   display: flex;
   gap: 5px;
-  
 }
 
-.footer-brand .wrapper .span { font-weight: var(--fw-500); }
+.footer-brand .wrapper .span {
+  font-weight: var(--fw-500);
+}
 
-.footer-link { transition: var(--transition-1); }
-
-.footer-link:is(:hover, :focus) { color: var(--kappel); }
-
+/* Footer Links */
 .footer-list-title {
   color: var(--white);
   font-family: var(--ff-league_spartan);
@@ -705,43 +796,137 @@ body {
   margin-block-end: 10px;
 }
 
-.footer-list .footer-link { padding-block: 5px; }
-
-.newsletter-form { margin-block: 20px 35px; }
-
-.newsletter-form .input-field {
-  background-color: var(--white);
-  padding: 12px;
-  border-radius: var(--radius-5);
+.footer-list {
   margin-block-end: 20px;
 }
 
-.newsletter-form .btn {
-  min-width: 100%;
-  justify-content: center;
+.footer-link {
+  /* padding-block: 5px; */
+  color: var(--gray-x-11);
+  transition: color 0.3s;
 }
 
-.social-list {
+.footer-link:is(:hover, :focus) {
+  color: var(--kappel);
+}
+
+/* Social Links */
+.social-links {
+  margin-block-start: 20px;
+}
+
+.social-links .span{
+  color:white
+}
+
+.about-item {
   display: flex;
-  gap: 25px;
+  align-items: center;
+  gap: 8px;
+  color: var(--gray-x-11);
 }
 
-.social-link { font-size: 20px; }
+.about-item ion-icon {
+  font-size: 24px;
+}
 
+/* Newsletter Form */
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.input-field {
+  background-color: var(--white);
+  padding: 12px;
+  border-radius: var(--radius-5);
+  border: 1px solid #ddd;
+}
+
+.newsletter-form .btn {
+  padding: 12px;
+  background-color: var(--kappel);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.newsletter-form .btn:hover {
+  background-color: var(--orange);
+}
+
+/* Footer Bottom */
 .footer-bottom {
   border-block-start: 1px solid var(--eerie-black-1);
-  padding-block: 30px;
+  padding-block: 20px;
+  text-align: center;
+  color: var(--gray-x-11);
 }
 
-.copyright { text-align: center; }
-
-.copyright-link {
-  color: var(--kappel);
-  display: inline-block;
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-grid {
+    flex-direction: column;
+    align-items: left;
+  }
 }
 
+/* Ensure all input fields, including textarea, have the same width */
+.newsletter-form .input-group, .newsletter-form .input-group-horizontal {
+  display: flex;
+  flex-direction: column;
+}
 
+.input-field {
+  background-color: var(--white);
+  padding: 12px;
+  border-radius: var(--radius-5);
+  border: 1px solid #ddd;
+  box-sizing: border-box; /* Include padding and border in the element's total width */
+  width: 100%; /* Ensure full-width for input fields */
+}
 
+/* Make textarea consistent with input fields */
+textarea.input-field {
+  resize: vertical; /* Allows vertical resizing only */
+}
+
+/* Specific adjustment to ensure consistency */
+.input-group textarea.input-field {
+  width: 310px; /* Full width for textarea */
+}
+
+/* Ensuring consistent width for all input fields */
+.input-group {
+  margin-bottom: 10px;
+}
+
+/* Responsive adjustments */
+@media(max-width:575px){
+  .input-group textarea.input-field {
+    width: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  .input-group-horizontal {
+    flex-direction: column;
+  }
+  
+  .input-group .input-field {
+    width: 100%; /* Full width for inputs in vertical layout */
+  }
+  
+  .newsletter-form .input-group {
+    margin-bottom: 15px; /* Extra space for responsive layout */
+  }
+  .newsletter-form{
+    gap:4px;
+  }
+}
 
 
 /*-----------------------------------*\
@@ -782,7 +967,6 @@ body {
  */
 
 @media (min-width: 575px) {
-
   /**
    * REUSED STYLE
    */
@@ -842,13 +1026,12 @@ body {
   .newsletter-form {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 4px;
   }
 
   .newsletter-form .input-field { margin-block-end: 0; }
 
   .newsletter-form .btn { min-width: max-content; }
-
 }
 
 
@@ -860,6 +1043,9 @@ body {
  */
 
 @media (min-width: 768px) {
+  .input-group textarea.input-field {
+    width: 310px; /* Full width for textarea */
+  }
 
   /**
    * CUSTOM PROPERTY
