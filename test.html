@@ -1,439 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EbanInternational - Best Abroad Study Partner in Nepal</title>
-  <meta name="title" content="EbanInternational - Best Abroad Study Partner in Nepal">
-  <meta name="description" content="This is Eban International website developed by Roshan">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Featured Universities</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+     <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
 
-  <!-- 
-    - favicon
-  -->
-  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+.featured-universities {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 10px;
+    padding: 20px;
+}
 
-  <!-- 
-    - custom css link
-  -->
-  <link rel="stylesheet" href="./assets/css/style.css">
+.university-item {
+    display: block;
+    width: 200px; /* Default size for desktop */
+    height: auto;
+}
 
-  <!-- 
-    - google font link
-  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Poppins:wght@400;500&display=swap"
-    rel="stylesheet">
+.university-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Optional: for rounded corners */
+    transition: transform 0.3s ease;
+}
 
-  <!-- 
-    - preload images
-  -->
-  <link rel="preload" as="image" href="./assets/images/hero-bg.svg">
-  <link rel="preload" as="image" href="./assets/images/hero-banner-1.jpg">
-  <link rel="preload" as="image" href="./assets/images/hero-banner-2.jpg">
-  <link rel="preload" as="image" href="./assets/images/hero-shape-1.svg">
-  <link rel="preload" as="image" href="./assets/images/hero-shape-2.png">
+.university-item img:hover {
+    transform: scale(1.05); /* Optional: for hover effect */
+}
 
-</head>
-
-<body id="top">
-
-
-  <header class="header" data-header>
-    <div class="container">
-      <a href="#" class="logo">
-        <img src="./assets/images/main_logo.JPG" width="100" height="30" alt="Eban International Logo">
-      </a>
-      <nav class="navbar" data-navbar>
-        <div class="wrapper">
-          <a href="#" class="logo">
-            <img src="./assets/images/main_logo.JPG" width="162" height="50" alt="Eban International Logo">
-          </a>
-          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
-            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
-          </button>
-        </div>
-
-        <ul class="navbar-list">
-          <li class="navbar-item">
-            <a href="/" class="navbar-link" data-nav-link>Home</a>
-          </li>
-          <li class="navbar-item">
-            <a href="/about" class="navbar-link" data-nav-link>About</a>
-          </li>
-          <li class="navbar-item">
-            <a href="/testimonials" class="navbar-link" data-nav-link>Testimonials</a>
-          </li>
-          <li class="navbar-item">
-            <a href="/contact" class="navbar-link" data-nav-link>Contact</a>
-          </li>
-        </ul>
-      </nav>
-      <div class="header-actions">
-        <button class="header-action-btn" aria-label="open menu" data-nav-toggler>
-          <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
-        </button>
-      </div>
-      <div class="overlay" data-nav-toggler data-overlay></div>
-    </div>
-  </header>
-  <main>
-    <article>
-      <section class="section hero has-bg-image" id="home" aria-label="home"
-        style="background-image: url('./assets/images/hero-bg.svg')">
-        <div class="container">
-          <div class="hero-content">
-            <h1 class="h1 section-title">
-              The Best Abroad<span class="span">Study Partner</span> in Nepal
-            </h1>
-            <p class="hero-text">
-              Your success is our priority. We provide the best guidance to help you achieve your educational goals.
-            </p>
-            <a href="/contact" class="btn has-before">
-              <span class="span">Contact Us</span>
-              <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-            </a>
-          </div>
-
-          <figure class="hero-banner">
-            <div class="img-holder one" style="--width: 270; --height: 300;">
-              <img src="./assets/images/hero-banner-1.jpg" width="270" height="300" alt="hero banner" class="img-cover">
-            </div>
-            <div class="img-holder two" style="--width: 240; --height: 370;">
-              <img src="./assets/images/hero-banner-2.jpg" width="240" height="370" alt="hero banner" class="img-cover">
-            </div>
-            <img src="./assets/images/hero-shape-2.png" width="622" height="551" alt="" class="shape hero-shape-2">
-          </figure>
-        </div>
-      </section>
-
-      <section class="section category" aria-label="category">
-        <div class="container">
-          <h2 class="h2 section-title">
-            Our Offerings
-          </h2>
-          <ul class="grid-list">
-            <li>
-              <div class="category-card" style="--color: 170, 75%, 41%">
-                <div class="card-icon">
-                  <img src="./assets/images/category-1.svg" width="40" height="40" loading="lazy"
-                    alt="Online Degree Programs" class="img">
-                </div>
-                <h3 class="h3">
-                  <p href="#" class="card-title">Career Guidance</p>
-                </h3>
-                <p class="card-text">
-                  We provide suggestions and counselling on Visa Application, Dependent Visa Application and any related inqueries. 
-                </p>
-              </div>
-            </li>
-
-            <li>
-              <div class="category-card" style="--color: 351, 83%, 61%">
-                <div class="card-icon">
-                  <img src="./assets/images/category-2.svg" width="40" height="40" loading="lazy"
-                    alt="Non-Degree Programs" class="img">
-                </div>
-                <h3 class="h3">
-                  <p href="#" class="card-title">Study Classes</p>
-                </h3>
-                <p class="card-text">
-                  We conduct N4, N5, JLPT and NAT classes.
-                </p>
-              </div>
-            </li>
-
-            <li>
-              <div class="category-card" style="--color: 229, 75%, 58%">
-                <div class="card-icon">
-                  <img src="./assets/images/category-3.svg" width="40" height="40" loading="lazy"
-                    alt="Off-Campus Programs" class="img">
-                </div>
-                <h3 class="h3">
-                  <p href="#" class="card-title">Dependent Documentation</p>
-                </h3>
-                <p class="card-text">
-                  Lorem ipsum dolor consec tur elit adicing sed umod tempor.
-                </p>
-              </div>
-            </li>
-
-            <li>
-              <div class="category-card" style="--color: 42, 94%, 55%">
-                <div class="card-icon">
-                  <img src="./assets/images/category-4.svg" width="40" height="40" loading="lazy"
-                    alt="Hybrid Distance Programs" class="img">
-                </div>
-                <h3 class="h3">
-                  <p href="#" class="card-title">Student Documentation</p>
-                </h3>
-                <p class="card-text">
-                  Lorem ipsum dolor consec tur elit adicing sed umod tempor.
-                </p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-     
-      <section class="section about" id="about" aria-label="about">
-        <div class="container">
-          <figure class="about-banner">
-            <div class="img-holder" style="--width: 520; --height: 370;">
-              <img src="./assets/images/about-banner.jpg" width="520" height="370" loading="lazy" alt="about banner"
-                class="img-cover">
-            </div>
-            <img src="./assets/images/about-shape-3.png" width="722" height="528" loading="lazy" alt=""
-              class="shape about-shape-3">
-          </figure>
-          <div class="about-content">
-            <p class="section-subtitle">About Us</p>
-            <h2 class="h2 section-title">
-              Expert Guidance To Study In
-               <span class="span">Japan</span>
-            </h2>
-            <p class="section-text">
-              Lorem ipsum dolor sit amet consectur adipiscing elit sed eiusmod ex tempor incididunt labore dolore magna
-              aliquaenim ad
-              minim.
-            </p>
-            <ul class="about-list">
-              <li class="about-item">
-                <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
-                <span class="span">Guidance and Information</span>
-              </li>
-              <li class="about-item">
-                <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
-                <span class="span">Language Classes</span>
-              </li>
-              <li class="about-item">
-                <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
-                <span class="span">Counselling from Certified Japanese Graduator</span>
-              </li>
-            </ul>
-            <img src="./assets/images/about-shape-4.svg" width="100" height="100" loading="lazy" alt=""
-              class="shape about-shape-4">
-          </div>
-        </div>
-      </section>
-      <h2 class="h2 section-title">Testimonials</h2>
-      <section class="tst_slider_section">  
-        <div class="tst_slider_container_82956">
-          <div class="tst_slider_82956">
-            <div class="tst_slide_82956">
-              <div class="tst_student_info_82956">
-                <img src="https://via.placeholder.com/120" alt="Student 1" class="tst_student_image_82956">
-                <p class="tst_student_name_82956">John Doe</p>
-                <span class="tst_student_details_82956">Class of 2023 | Computer Science</span>
-              </div>
-              <div class="tst_testimonial_82956">
-                <p>"This school has been an amazing experience. The teachers are supportive, and I've learned so much!"</p>
-              </div>
-            </div>
-            <div class="tst_slide_82956">
-              <div class="tst_student_info_82956">
-                <img src="https://via.placeholder.com/120" alt="Student 2" class="tst_student_image_82956">
-                <p class="tst_student_name_82956">Jane Smith</p>
-                <span class="tst_student_details_82956">Class of 2024 | Biology</span>
-              </div>
-              <div class="tst_testimonial_82956">
-                <p>"I've grown both academically and personally thanks to the wonderful community at this school."</p>
-              </div>
-            </div>
-            <div class="tst_slide_82956">
-              <div class="tst_student_info_82956">
-                <img src="https://via.placeholder.com/120" alt="Student 3" class="tst_student_image_82956">
-                <p class="tst_student_name_82956">Mike Johnson</p>
-                <span class="tst_student_details_82956">Class of 2022 | Business Administration</span>
-              </div>
-              <div class="tst_testimonial_82956">
-                <p>"The small class sizes and personalized attention have really helped me excel in my studies."</p>
-              </div>
-            </div>
-          </div>
-          <button class="tst_nav_button_82956 tst_prev_82956">&#10094;</button>
-          <button class="tst_nav_button_82956 tst_next_82956">&#10095;</button>
-        </div>
-      </section>
-      <section>
-        <div class="footer-form">
-          <form action="#" method="POST" class="footer-contact-form">
-            <h2 class="h2 section-title">Request A Callback</h2>
-            <div class="input-row">
-              <div class="input-group">
-                <label for="name"><i class="fas fa-user"></i></label>
-                <input type="text" id="name" name="name" placeholder="Full Name" required>
-              </div>
-              <div class="input-group">
-                <label for="email"><i class="fas fa-envelope"></i></label>
-                <input type="email" id="email" name="email" placeholder="Email" required>
-              </div>
-            </div>
-            <div class="input-group">
-              <label for="phone"><i class="fas fa-phone-alt"></i></label>
-              <input type="tel" id="phone" name="phone" placeholder="Phone" required>
-            </div>
-            <div class="input-group">
-              <label for="message"><i class="fas fa-comment"></i></label>
-              <textarea id="message" name="message" placeholder="Message" rows="4" required></textarea>
-            </div>
-            <button type="submit" class="footer-submit-btn">Submit Your Request</button>
-          </form>
-        </div>
-      </section>
-    </article>
-  </main>
-
-  <footer class="footer" style="background-image: url('./assets/images/footer-bg.png')">
-    <div class="footer-top section">
-      <div class="container footer-grid">
-        <!-- Brand and Contact Info -->
-        <div class="footer-brand">
-          <a href="#" class="logo">
-            <img src="./assets/images/main_logo.JPG" width="140" height="50" alt="EduWeb logo">
-          </a>
-          <p class="footer-brand-text">Feel free to contact us. We will be very delighted to help you.</p>
-          <div class="wrapper">
-            <span class="span" style="font-weight: bold;">Add:</span>
-            <address class="address">Tokha-10, Samakhushi</address>
-          </div>
-          <div class="wrapper">
-            <span class="span">Call:</span>
-            <a href="tel:+011234567890" class="footer-link">01-5921201</a>
-          </div>
-          <div class="wrapper">
-            <span class="span">Email:</span>
-            <a href="mailto:info@eduweb.com" class="footer-link">eban.international2024@gmail.com</a>
-          </div>
-        </div>
-  
-        <!-- Quick Links -->
-        <ul class="footer-list" id="list1">
-          <li>
-            <p class="footer-list-title">Links</p>
-          </li>
-          <li>
-            <a href="#" class="footer-link">Contact Us</a>
-          </li>
-          <li>
-            <a href="#" class="footer-link">About Us</a>
-          </li>
-          <li>
-            <a href="#" class="footer-link">FAQ's</a>
-          </li>
-          
-          <!-- Socials added here -->
-          <li>
-            <p class="footer-list-title">Socials</p>
-            <p class="footer-list-text">Please contact us through the following social platforms:</p>
-            <a target="_blank" href="https://www.facebook.com/profile.php?id=61559304430920" class="about-item">
-              <ion-icon style="color:white" name="logo-facebook"></ion-icon>
-              <span class="span">Facebook Page</span>
-            </a>
-            <a href="#" class="about-item">
-              <ion-icon style="color:white" name="logo-instagram"></ion-icon>
-              <span class="span">Instagram</span>
-            </a>
-            <a href="#" class="about-item">
-              <ion-icon style="color:white" name="logo-linkedin"></ion-icon>
-              <span class="span">LinkedIn</span>
-            </a>
-            <a href="mailto:eban.international2024@gmail.com" class="about-item">
-              <ion-icon style="color:white" name="mail-outline"></ion-icon>
-              <span class="span">eban.international2024@gmail.com</span>
-            </a>
-          </li>
-        </ul>
-        
-  
-        <!-- Newsletter Form -->
-        <div class="footer-form">
-          <p class="footer-list-title">Subscribe to Our Newsletter</p>
-          <form action="#" method="POST" class="newsletter-form">
-            <div class="input-group">
-              <input type="text" class="input-field" name="name" placeholder="Full Name" required>
-            </div>
-            <div class="input-group">
-              <input type="email" class="input-field" name="email" placeholder="Email Address" required>
-            </div>
-            <button type="submit" class="btn">Subscribe</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </footer>
-  
-  <a href="#top" class="back-top-btn" aria-label="back top top" data-back-top-btn>
-    <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
-  </a>
-  <script>
-(function() {
-    const slider = document.querySelector('.tst_slider_82956');
-    const slides = document.querySelectorAll('.tst_slide_82956');
-    const prevButton = document.querySelector('.tst_prev_82956');
-    const nextButton = document.querySelector('.tst_next_82956');
-    let currentIndex = 0;
-
-    // Clone the first and last slides
-    const firstSlideClone = slides[0].cloneNode(true);
-    const lastSlideClone = slides[slides.length - 1].cloneNode(true);
-
-    // Append the clones to the slider
-    slider.appendChild(firstSlideClone);
-    slider.insertBefore(lastSlideClone, slides[0]);
-
-    const totalSlides = slides.length + 2; // including the two cloned slides
-
-    // Initialize the slider to show the first actual slide
-    slider.style.transform = `translateX(-100%)`;
-
-    function showSlide(index, direction) {
-        let targetIndex = index;
-
-        slider.style.transition = 'transform 0.5s ease-in-out';
-        slider.style.transform = `translateX(-${(targetIndex + 1) * 100}%)`;
-
-        // Handle "instant" reset after the transition completes
-        slider.addEventListener('transitionend', () => {
-            if (targetIndex === -1) {
-                // If we're showing the cloned last slide, reset to the real last slide without animation
-                slider.style.transition = 'none';
-                slider.style.transform = `translateX(-${slides.length * 100}%)`;
-                targetIndex = slides.length - 1;
-                setTimeout(() => slider.style.transition = 'transform 0.5s ease-in-out', 50);
-            } else if (targetIndex === slides.length) {
-                // If we're showing the cloned first slide, reset to the real first slide without animation
-                slider.style.transition = 'none';
-                slider.style.transform = `translateX(-100%)`;
-                targetIndex = 0;
-                setTimeout(() => slider.style.transition = 'transform 0.5s ease-in-out', 50);
-            }
-            currentIndex = targetIndex;
-        }, { once: true });
-
-        currentIndex = targetIndex;
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .university-item {
+        width: calc(50% - 10px); /* Two items per row on medium screens */
     }
+}
 
-    prevButton.addEventListener('click', () => showSlide(currentIndex - 1, 'prev'));
-    nextButton.addEventListener('click', () => showSlide(currentIndex + 1, 'next'));
-
-    // Ensure proper sizing on window resize
-    window.addEventListener('resize', () => {
-        slider.style.transition = 'none';
-        slider.style.transform = `translateX(-${(currentIndex + 1) * 100}%)`;
-        setTimeout(() => {
-            slider.style.transition = 'transform 0.5s ease-in-out';
-        }, 50);
-    });
-})();
+@media (max-width: 480px) {
+    .university-item {
+        width: calc(50% - 10px); /* Two items per row on small screens */
+    }
+}
 
 
-    </script>
-  <script src="./assets/js/script.js" defer></script>
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+     </style>
+</head>
+<body>
+    <section class="featured-universities">
+        <a href="https://example.com/university1" class="university-item" target="_blank">
+            <img src="file:///C:/Users/gauta/Desktop/edubin-education-html-template/edubin-education-html-template/images/patnar-logo/p-3.png" alt="University 1">
+        </a>
+        <a href="https://example.com/university2" class="university-item" target="_blank">
+            <img src="file:///C:/Users/gauta/Desktop/edubin-education-html-template/edubin-education-html-template/images/patnar-logo/p-3.png" alt="University 2">
+        </a>
+        <a href="https://example.com/university3" class="university-item" target="_blank">
+            <img src="file:///C:/Users/gauta/Desktop/edubin-education-html-template/edubin-education-html-template/images/patnar-logo/p-3.png" alt="University 3">
+        </a>
+        <a href="https://example.com/university3" class="university-item" target="_blank">
+          <img src="file:///C:/Users/gauta/Desktop/edubin-education-html-template/edubin-education-html-template/images/patnar-logo/p-3.png" alt="University 3">
+      </a>
+      <a href="https://example.com/university3" class="university-item" target="_blank">
+        <img src="file:///C:/Users/gauta/Desktop/edubin-education-html-template/edubin-education-html-template/images/patnar-logo/p-3.png" alt="University 3">
+    </a>
+        <!-- Add more universities as needed -->
+    </section>
 </body>
 </html>
