@@ -569,6 +569,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   position: relative;
+  gap:4px;
 }
 
 .testimonial-slide {
@@ -876,6 +877,33 @@ textarea.input-field {
     gap:4px;
   }
 }
+
+/* ====FOOTER'S RESULT===== */
+/* Basic styling for the popup notification */
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #333;
+  color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  display: none; /* Initially hidden */
+  z-index: 1000; /* Ensures it appears above other content */
+  max-width: 90%; /* Responsive width */
+  word-wrap: break-word; /* Handle long messages */
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 600px) {
+  .notification {
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+  }
+}
+
 
 
 /*-----------------------------------*\

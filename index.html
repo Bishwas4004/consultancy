@@ -376,14 +376,15 @@
         <!-- Contact Form with Phone and Email Horizontally Aligned -->
         <div class="footer-form">
           <p class="footer-list-title" style="text-align: center;">Request A Callback</p>
-          <form action="#" method="POST" class="newsletter-form">
+          <form action="https://api.web3forms.com/submit" method="POST" id="callback-form" class="newsletter-form">
+            <input type="hidden" name="access_key" value="5d56072e-1c18-45e0-b8f6-ae9f853ba59e">
             <div class="input-group">
               <input type="text" class="input-field" name="name" placeholder="Full Name" required>
             </div>
   
-            <!-- Phone and Email side by side -->
+            
             <div class="input-group">
-              <input type="tel" class="input-field" name="phone" placeholder="Phone Number" required>
+              <input type="number" class="input-field" name="phone" placeholder="Phone Number" required>
             </div>
 
             <div  class="input-group">
@@ -391,19 +392,20 @@
             </div>
   
             <div class="input-group">
-              <textarea class="input-field" name="message" placeholder="Your Message" rows="4"></textarea>
+              <textarea class="input-field" name="message" placeholder="Your Message" rows="4" required></textarea>
             </div>
   
             <center><button type="submit" class="btn">Submit</button></center>
           </form>
+          <div id="notification" class="notification"></div>
         </div>
-        
       </div>
     </div>
   </footer>
   <a href="#top" class="back-top-btn" aria-label="back top top" data-back-top-btn>
     <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
   </a>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="./assets/js/script.js" defer></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

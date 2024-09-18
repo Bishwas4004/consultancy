@@ -1,3 +1,4 @@
+
 'use strict';
 
 
@@ -84,3 +85,49 @@ function showSlides() {
     setTimeout(showSlides, 5000); // Change slide every 5 seconds
 }
 showSlides();
+
+
+$("#callback-form").on('submit', function(e) {
+  e.preventDefault();
+
+  const form = document.getElementById('callback-form');
+  const notification = document.getElementById('notification');
+  notification.innerHTML = "";
+  notification.style.display = "block";
+
+  const formData = new FormData(form);
+  const object = Object.fromEntries(formData);
+  const json = JSON.stringify(object);
+
+  notification.innerHTML = "Please wait...";
+
+  fetch('https://api.web3forms.com/submit', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    },
+    body: json
+  })
+  .then(async (response) => {
+    let json = await response.json();
+    if (response.ok) {
+      notification.innerHTML = `<p>${json.message}</p>`;
+    } else {
+      notification.innerHTML = `<p>${json.message || 'An error occurred. Please try again later.'}</p>`;
+    }
+  })
+  .catch(error => {
+    console.error('Error:', error);
+    notification.innerHTML = "<p>Something went wrong! Please try again later.</p>";
+  })
+  .finally(() => {
+    form.reset();
+    setTimeout(() => {
+      notification.style.display = "none";
+    }, 3000);
+  });
+});
+
+
+
