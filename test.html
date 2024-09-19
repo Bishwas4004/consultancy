@@ -3,75 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Featured Universities</title>
-    <!-- <link rel="stylesheet" href="styles.css"> -->
-     <style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-.featured-universities {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 10px;
-    padding: 20px;
-}
-
-.university-item {
-    display: block;
-    width: 200px; /* Default size for desktop */
-    height: auto;
-}
-
-.university-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px; /* Optional: for rounded corners */
-    transition: transform 0.3s ease;
-}
-
-.university-item img:hover {
-    transform: scale(1.05); /* Optional: for hover effect */
-}
-
-/* Responsive adjustments for smaller screens */
-@media (max-width: 768px) {
-    .university-item {
-        width: calc(50% - 10px); /* Two items per row on medium screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .university-item {
-        width: calc(50% - 10px); /* Two items per row on small screens */
-    }
-}
-
-
-
-     </style>
+    <title>Contact Us - Your Educational Consultancy</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <section class="featured-universities">
-        <a href="https://example.com/university1" class="university-item" target="_blank">
-            <img src="file:///C:/Users/gauta/Desktop/edubin-education-html-template/edubin-education-html-template/images/patnar-logo/p-3.png" alt="University 1">
-        </a>
-        <a href="https://example.com/university2" class="university-item" target="_blank">
-            <img src="file:///C:/Users/gauta/Desktop/edubin-education-html-template/edubin-education-html-template/images/patnar-logo/p-3.png" alt="University 2">
-        </a>
-        <a href="https://example.com/university3" class="university-item" target="_blank">
-            <img src="file:///C:/Users/gauta/Desktop/edubin-education-html-template/edubin-education-html-template/images/patnar-logo/p-3.png" alt="University 3">
-        </a>
-        <a href="https://example.com/university3" class="university-item" target="_blank">
-          <img src="file:///C:/Users/gauta/Desktop/edubin-education-html-template/edubin-education-html-template/images/patnar-logo/p-3.png" alt="University 3">
-      </a>
-      <a href="https://example.com/university3" class="university-item" target="_blank">
-        <img src="file:///C:/Users/gauta/Desktop/edubin-education-html-template/edubin-education-html-template/images/patnar-logo/p-3.png" alt="University 3">
-    </a>
-        <!-- Add more universities as needed -->
-    </section>
+    <header>
+        <nav>
+            <img src="logo.png" alt="Your Educational Consultancy Logo" class="logo">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Get in Touch</h1>
+            <p>We're here to help you pursue your dreams abroad!</p>
+        </section>
+
+        <section class="contact-info">
+            <div class="info-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Address</h3>
+                <p>123 Education Street, City, Country, ZIP</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-phone"></i>
+                <h3>Phone</h3>
+                <p>+1 (123) 456-7890</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-envelope"></i>
+                <h3>Email</h3>
+                <p>info@youreduconsultancy.com</p>
+            </div>
+        </section>
+
+        <section class="social-links">
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </section>
+
+        <section class="contact-form">
+            <h2>Send us a Message</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" required>
+                    <label for="name">Name</label>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" required>
+                    <label for="email">Email</label>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="phone" name="phone" required>
+                    <label for="phone">Phone</label>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" required></textarea>
+                    <label for="message">Message</label>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Your Educational Consultancy. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

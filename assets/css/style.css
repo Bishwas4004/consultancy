@@ -805,7 +805,7 @@ border-color: rgb(39, 10, 10);
 }
 
 .newsletter-form .btn:hover {
-  background-color: var(--orange);
+  background-color: hsl(170.3, 87.3%, 59.8%);
 }
 
 /* Footer Bottom */

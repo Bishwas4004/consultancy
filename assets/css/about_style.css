@@ -1,0 +1,98 @@
+
+.about-page {
+    margin-left: 1%;
+    margin-right: 1%;
+    background-color: #f8f9fa;
+    font-size:20px ;
+}
+
+.about-page * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Specific styles for the About page */
+.about-page .about-hero {
+    background-color: #3a0ca3;
+    color: #fff;
+    text-align: center;
+    padding: 6rem 1rem;
+}
+
+.about-page .about-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.about-page .about-subtitle {
+    font-size: 1.6rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.about-page .about-story,
+.about-page .about-mission {
+    padding: 3rem 1%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-page .about-section-title {
+    font-size: 3rem;
+    margin-bottom: 4rem;
+    text-align: center;
+    color: #3a0ca3;
+}
+
+.about-page .about-story-content {
+    display: flex;
+    align-items: center;
+    gap: 10rem;
+    justify-content: space-between;
+}
+
+.about-page .about-story-text {
+    flex: 1;
+}
+
+.about-page .about-story-text p {
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+.about-page .about-story-image {
+    flex: 1;
+}
+
+.about-page .about-team-photo {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.about-page .about-mission {
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.about-page .about-mission-text {
+    font-size: 1.8rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .about-page .about-title {
+        font-size: 2.5rem;
+    }
+
+    .about-page .about-story-content {
+        flex-direction: column-reverse;
+    }
+
+    .about-page .about-story-image {
+        margin-bottom: 2rem;
+    }
+}
