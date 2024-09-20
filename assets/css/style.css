@@ -26,7 +26,7 @@
    * gradient color
    */
 
-  --gradient: linear-gradient(-90deg,hsl(151, 58%, 46%) 0%,hsl(170, 75%, 41%) 100%);
+  --gradient: linear-gradient(-90deg,hsl(151, 60%, 39%) 0%,hsl(170, 47%, 46%) 100%);
 
   /**
    * typography
@@ -137,7 +137,7 @@ html {
 }
 
 body {
-  background-color: var(--white);
+  background-color: #f0e5e5e3;
   color: var(--gray-web);
   font-size: 1.6rem;
   line-height: 1.75;
@@ -147,7 +147,7 @@ body {
 
 ::-webkit-scrollbar { width: 10px; }
 
-::-webkit-scrollbar-track { background-color: hsl(0, 0%, 98%); }
+::-webkit-scrollbar-track { background-color: hsl(0, 0%, 96%); }
 
 ::-webkit-scrollbar-thumb { background-color: hsl(0, 0%, 80%); }
 
@@ -176,6 +176,10 @@ body {
   line-height: 1;
 }
 
+.h1_top{
+  color:hsl(0, 0%, 100%)
+}
+
 .h1,
 .h2 { font-weight: var(--fw-600); }
 
@@ -189,7 +193,7 @@ body {
 }
 
 .section-title {
-  --color: var(--radical-red);
+  --color: #ff8840;
   text-align: center;
 }
 
@@ -267,7 +271,13 @@ body {
   gap: 30px;
 }
 
-.category-card{ background-color: hsla(var(--color), 0.1); }
+.category-card{ 
+  margin-top: 4%;
+  background-color: white;
+  border-style: solid;
+  border-width: 2px;
+  width: 100%;
+ }
 
 :is(.course, .blog) .section-title { margin-block-end: 40px; }
 
@@ -396,9 +406,10 @@ body {
 
 .hero-text {
   color: var(--eerie-black-1);
-  font-size: var(--fs-4);
+  font-size: 2rem;
   text-align: center;
   margin-block: 18px 20px;
+  font-weight: 450;
 }
 
 .hero .btn { margin-inline: auto; }
@@ -539,7 +550,7 @@ body {
 /* Testimonials */
 /* -------------------- */
 .testimonial-section {
-  background-color: #ffffffe5;
+  background-color: #ffffff;
   background-position: center;
   padding: 10px 20px;
   color: #fff;
@@ -581,17 +592,12 @@ body {
 }
 
 .testimonial {
-  background: linear-gradient(135deg, #9de3f8, #489bee);
   border-radius: 12px;
   padding: 25px;
   flex: 0 0 48%;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease-in-out;
-}
-
-.testimonial:hover {
-border: solid;
-border-color: rgb(39, 10, 10);
+  background-color: #497fb3;
 }
 
 .testimonial-content p {
@@ -653,7 +659,7 @@ border-color: rgb(39, 10, 10);
 }
 
 .indicator.active {
-  background-color: yellow;
+  background-color: red;
   opacity: 5; /* Highlight the active dot if you choose to use it later */
 }
 
@@ -704,7 +710,7 @@ border-color: rgb(39, 10, 10);
 
 .footer {
   background-repeat: no-repeat;
-  background-color: var(--eerie-black-2);
+  background-color: hsla(240, 53.1%, 12.5%, 0.92);
   color: var(--gray-x-11);
   font-size: var(--fs-5);
   padding: 40px 0;
@@ -805,7 +811,7 @@ border-color: rgb(39, 10, 10);
 }
 
 .newsletter-form .btn:hover {
-  background-color: hsl(170.3, 87.3%, 59.8%);
+  background-image: var(--gradient);
 }
 
 /* Footer Bottom */

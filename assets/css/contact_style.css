@@ -1,18 +1,24 @@
 .contact-header {
-    background: linear-gradient(to right, #3498db, #2ecc71);
+    /* background: #497fb3; */
     color: #fff;
-    text-align: center;
     padding: 30px 20px;
     margin-top: 70px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
   
   .contact-header h1 {
     font-size: 48px;
+    font-family: 'Montserrat', sans-serif;
+    color:#fff;
   }
   
   .contact-header p {
-    font-size: 20px;
     font-weight: 400;
+    color: black;
+    font-size: 2.2rem;
+    font-weight: 450;
   }
   
   .container1 {
@@ -77,7 +83,6 @@
 }
 
   button{
-    /* background-color: #2ecc71; */
     color: #fff;
     padding: 15px 30px;
     border: none;
@@ -129,7 +134,7 @@
   }
   
   .social-btn:hover {
-    background-color: #2980b9;
+    background-color: #497fb3;
   }
   
   .info-image img {
